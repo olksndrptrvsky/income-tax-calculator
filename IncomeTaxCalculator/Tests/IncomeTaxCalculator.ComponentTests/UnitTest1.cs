@@ -1,4 +1,4 @@
-namespace IncomeTaskCalculator.ComponentTests
+namespace IncomeTaxCalculator.ComponentTests
 {
     public class UnitTest1
     {

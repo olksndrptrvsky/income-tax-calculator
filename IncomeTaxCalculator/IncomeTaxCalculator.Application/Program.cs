@@ -1,4 +1,7 @@
-namespace IncomeTaskCalculator.Application
+using System.Reflection;
+using IncomeTaxCalculator.Infrastructure;
+
+namespace IncomeTaxCalculator.Application
 {
     public class Program
     {
@@ -7,6 +10,12 @@ namespace IncomeTaskCalculator.Application
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddMediatR(new MediatRServiceConfiguration()
+                .RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+            var connectionString = builder.Configuration.GetConnectionString("Default");
+            builder.Services.AddInfrastructureModule(connectionString ?? throw new ArgumentNullException("Connection string can't be null"));
+            builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

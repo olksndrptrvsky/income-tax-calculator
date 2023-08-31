@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "IncomeTaskCalculator.Application": {
+    "IncomeTaxCalculator.Application": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Application", "IncomeTaskCalculator.Application\IncomeTaxCalculator.Application.csproj", "{A9FDB702-0573-4BEB-AEE1-551D0B2A270A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Application", "IncomeTaxCalculator.Application\IncomeTaxCalculator.Application.csproj", "{A9FDB702-0573-4BEB-AEE1-551D0B2A270A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Domain", "IncomeTaskCalculator.Domain\IncomeTaxCalculator.Domain.csproj", "{50ED14B2-65D8-4B22-A25B-4F64096300F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Domain", "IncomeTaxCalculator.Domain\IncomeTaxCalculator.Domain.csproj", "{50ED14B2-65D8-4B22-A25B-4F64096300F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Infrastructure", "IncomeTaskCalculator.Infrastructure\IncomeTaxCalculator.Infrastructure.csproj", "{C71C5812-EDD6-4B24-B0CC-F6A410C5C950}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.Infrastructure", "IncomeTaxCalculator.Infrastructure\IncomeTaxCalculator.Infrastructure.csproj", "{C71C5812-EDD6-4B24-B0CC-F6A410C5C950}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.UnitTests", "Tests\IncomeTaxCalculator.UnitTests\IncomeTaxCalculator.UnitTests.csproj", "{1B9AFC53-55DD-4F00-BD8C-025EAF5D8A35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{78038A06-C9DE-44E3-B106-980D60B74ACD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.ComponentTests", "Tests\IncomeTaskCalculator.ComponentTests\IncomeTaxCalculator.ComponentTests.csproj", "{6D74A8DB-68B0-4387-BA0A-5904F71F70D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncomeTaxCalculator.ComponentTests", "Tests\IncomeTaxCalculator.ComponentTests\IncomeTaxCalculator.ComponentTests.csproj", "{6D74A8DB-68B0-4387-BA0A-5904F71F70D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

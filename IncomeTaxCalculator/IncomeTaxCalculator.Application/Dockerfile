@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["IncomeTaskCalculator.Application/IncomeTaskCalculator.Application.csproj", "IncomeTaskCalculator.Application/"]
-RUN dotnet restore "IncomeTaskCalculator.Application/IncomeTaskCalculator.Application.csproj"
+COPY ["IncomeTaxCalculator.Application/IncomeTaxCalculator.Application.csproj", "IncomeTaxCalculator.Application/"]
+RUN dotnet restore "IncomeTaxCalculator.Application/IncomeTaxCalculator.Application.csproj"
 COPY . .
-WORKDIR "/src/IncomeTaskCalculator.Application"
-RUN dotnet build "IncomeTaskCalculator.Application.csproj" -c Release -o /app/build
+WORKDIR "/src/IncomeTaxCalculator.Application"
+RUN dotnet build "IncomeTaxCalculator.Application.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "IncomeTaskCalculator.Application.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "IncomeTaxCalculator.Application.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "IncomeTaskCalculator.Application.dll"]
+ENTRYPOINT ["dotnet", "IncomeTaxCalculator.Application.dll"]
