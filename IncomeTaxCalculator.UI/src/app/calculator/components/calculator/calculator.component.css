@@ -1,0 +1,7 @@
+.wrapper {
+    margin: 30px;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}

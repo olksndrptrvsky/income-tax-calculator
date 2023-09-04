@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  backend:
+    build: ./IncomeTaxCalculator/IncomeTaxCalculator.Application
+    ports:
+      - "5000:80"
+  frontend:
+    build: ./IncomeTaxCalculator.UI
+    ports:
+      - "4200:80"
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - db-data:/var/opt/mssql/data
+
+volumes:
+  db-data:

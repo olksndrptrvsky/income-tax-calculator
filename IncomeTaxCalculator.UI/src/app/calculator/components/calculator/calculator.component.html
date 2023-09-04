@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="input-group col-7" *ngIf="selectedTaxSystem else noTaxSystemSelected">
+        <input type="text" #annualSalaryInput class="form-control" placeholder="Annual Salary" aria-label="Text input with dropdown button">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">{{selectedTaxSystem.name}}</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" *ngFor="let taxSystem of availableTaxSystems" (click)="onSelectTaxSystem(taxSystem.id)">{{taxSystem.name}}</a>
+          </div>
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" (click)="onCalculateTaxes(+annualSalaryInput.value)" type="button">Calculate</button>
+        </div>
+    </div>
+    
+    <div *ngIf="taxes">
+        <app-taxes [taxes]="taxes"></app-taxes>
+    </div>
+    
+    <ng-template #noTaxSystemSelected>
+        <p>No tax system available. Please create one in the Configuration</p>
+    </ng-template>
+    
+</div>
+
+

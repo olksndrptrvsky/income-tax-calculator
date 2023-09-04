@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <table class="table col-8">
+        <thead>
+            <tr>
+                <th scope="row">Gross Annual Salary</th>
+                <td>{{taxes.grossAnnualSalary | currency }}</td>
+              </tr>
+        </thead>  
+          <tbody>
+          <tr>
+            <th scope="row">Gross Monthly Salary</th>
+            <td>{{taxes.grossMonthlySalary | currency }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Net Annual Salary</th>
+            <td>{{taxes.netAnnualSalary | currency }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Net Monthly Salary</th>
+            <td>{{taxes.netMonthlySalary | currency }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Annual Tax Paid:</th>
+            <td>{{taxes.annualTaxPaid | currency }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Monthly Tax Paid</th>
+            <td>{{taxes.monthlyTaxPaid | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

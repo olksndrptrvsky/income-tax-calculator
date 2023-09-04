@@ -1,0 +1,36 @@
+<div class="wrapper col-8">
+    <div *ngIf="taxSystem">
+        <h2>{{taxSystem.name}}</h2>
+        <form (submit)="onSubmit()" >
+            <div class="form-group">
+              <label for="taxSystemNameInput">Tax System Name</label>
+              <input type="email" class="form-control" [(ngModel)]="taxSystem.name" id="taxSystemNameInput" name="taxSystemNameInput">
+            </div>
+            <div class="form-group" id="tax-bands">
+                <div class="tax-band row" *ngFor="let taxBand of taxSystem.bands; let i = index">
+                    <h5>
+                        Tax Band {{i + 1}}
+                    </h5>
+                    <div>
+                        <label for="taxSystemNameInput">Lower Limit</label>
+                        <input type="email" class="form-control" [(ngModel)]="taxBand.lowerLimit" [name]="'taxBandLowerLimitInput' + i">
+                    </div>
+                    <div>
+                        <label for="taxSystemNameInput">Upper Limit</label>
+                        <input type="email" class="form-control" [(ngModel)]="taxBand.upperLimit" [name]="'taxBandUpperLimitInput' + i">
+                    </div>
+                    <div>
+                        <label for="taxSystemNameInput">Tax Rate</label>
+                        <input type="email" class="form-control" [(ngModel)]="taxBand.rate" [name]="'taxBandRateInput' + i">
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-danger remove-band-button" (click)="onRemoveBand(i)">Remove</button>
+                    </div>
+
+                </div>
+            </div>
+            <button type="button" class="btn btn-warning add-new-band-button" (click)="onAddNewBand()">Add new band</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+    </div>
+</div>
